@@ -1,0 +1,310 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    /*Pregunta 1.1: Escribe un programa en C++ que declare tres variables: una de tipo entero, una de tipo flotante y una de tipo carácter. Inicializa las variables con valores adecuados e imprime sus valores en consola. */
+    cout << "===EJERCICIO 1.1: Declaracion e impresion de variables===" << endl;
+    cout << "se declaran las variables entero, flotante y caracter para luego imprimir sus valores" << endl;
+    int entero = 5;
+    float flotante = 3.14;
+    char caracter = 'A';
+
+    cout << "Valor asignado en entero: " << entero << endl;
+    cout << "Valor asignado en flotante: " << flotante << endl;
+    cout << "Valor asignado en caracter: " << caracter << endl;
+
+    /*Pregunta 1.2: Explica la diferencia entre los tipos de datos int, float y char en C++. ¿Cuándo es recomendable usar cada uno?*/
+    cout << "===EJERCICIO 1.2: Diferencias entre tipos de datos: "
+            "\n"
+         << endl;
+    cout << "El tipo de dato 'int' se usa cuando se realizan operaciones matemáticas con numeros enteros o también para ejecutar o finalizar un programa "
+            "\n"
+         << endl;
+    cout << "El tipo de dato 'float' se utiliza para realizar operaciones matemáticas con numeros decimales"
+            "\n"
+         << endl;
+    cout << "El tipo de dato 'char' se utiliza para representar caracteres individuales."
+            "\n"
+         << endl;
+    cout << "Es recomendable usar 'int' cuando se trabajamos con conteos o índices, 'float' cuando se necesita precisión decimal y 'char' para guardar letras o símbolos."
+            "\n"
+         << endl;
+
+    /*Pregunta 2.1: Escribe un programa en C++ que reciba dos números enteros por teclado y muestre la suma, resta, multiplicación, división y módulo de estos dos números.*/
+    cout << "===EJERCICIO 2.1: Operaciones basicas con dos numeros enteros: "
+            "\n"
+         << endl;
+    int num1;
+    int num2;
+    cout << "Ingrese el primer numero entero: ";
+    cin >> num1;
+    cout << "Ingrese el segundo numero entero: ";
+    cin >> num2;
+
+    cout << "Suma: " << num1 + num2 << endl;
+    cout << "Resta: " << num1 - num2 << endl;
+    cout << "Multiplicacion: " << num1 * num2 << endl;
+    if (num2 != 0)
+    {
+        cout << "Division: " << num1 / num2 << endl;
+        cout << "Modulo: " << num1 % num2 << endl;
+    }
+    else
+    {
+        cout << "Division y modulo por cero no son posibles." << endl;
+    }
+
+    /*Pregunta 2.2: ¿Cuál es la diferencia entre los operadores de comparación == y != en C++? Da un ejemplo de su uso.*/
+    cout << "===EJERCICIO 2.2: Diferencias entre operadores de comparación '==' y '!=': "
+            "\n"
+         << endl;
+
+    cout << "El operador '==' se utiliza para comparar si dos valores son iguales, mientras que el operador '!=' se utiliza para comparar si dos valores son diferentes."
+            "\n"
+         << endl;
+    cout << "Ejemplo de uso del operador '==': "
+            "\n"
+         << endl;
+    int a = 5;
+    int b = 5;
+    cout << " a = 5 y b = 5" << endl;
+    if (a == b)
+    {
+        cout << "a es igual (==) a b" << endl;
+    }
+    else
+    {
+        cout << "a no es igual (!=) a b" << endl;
+    }
+    cout << "Ejemplo de uso del operador '!=': "
+            "\n"
+         << endl;
+    int x = 10;
+    int y = 20;
+    cout << " x = 10 y, y = 20" << endl;
+    if (x != y)
+    {
+        cout << "x es diferente (!=) de y" << endl;
+    }
+    else
+    {
+        cout << "x no es diferente (==) de y" << endl;
+    }
+
+    /*Pregunta 2.3: ¿Cómo se pueden usar los operadores lógicos && (AND), || (OR) y ! (NOT) en C++?
+    Escribe un ejemplo con condiciones simples.*/
+    cout << "===EJERCICIO 2.3: Uso de operadores logicos: ==="
+            "\n"
+         << endl;
+
+    bool condicion1 = (a == b);
+    bool condicion2 = (x != y);
+
+    if (condicion1 && condicion2)
+    {
+        cout << "Ambas condiciones son verdaderas." << endl;
+        "\n";
+    }
+    else if (condicion1 || condicion2)
+    {
+        cout << "Al menos una de las condiciones es verdadera." << endl;
+        "\n";
+    }
+    else
+    {
+        cout << "Ninguna de las condiciones es verdadera." << endl;
+        "\n";
+    }
+
+    if (!condicion1)
+    {
+        cout << "La primera condicion es falsa." << endl;
+        "\n";
+    }
+    else
+    {
+        cout << "La primera condicion es verdadera." << endl;
+        "\n";
+    }
+
+    /*Pregunta 3.1: Escribe un programa en C++ que pida la edad de una persona y muestre un mensaje indicando si es mayor de edad (18 años o más) o menor de edad (menos de 18 años). Usa una estructura if-else.*/
+    cout << "===EJERCICIO 3.1: Determinar si una persona es mayor o menor de edad: "
+            "\n"
+         << endl;
+
+    int edad;
+    cout << "Ingrese la edad de la persona: "
+            "\n";
+    cin >> edad;
+
+    if (edad >= 18)
+    {
+        cout << "La persona es mayor de edad." << endl;
+        "\n";
+    }
+    else
+    {
+        cout << "La persona es menor de edad." << endl;
+        "\n";
+    }
+
+    /*Pregunta 3.2: Explica cómo funciona una estructura else if en C++. Da un ejemplo donde sea necesario utilizarla.*/
+    cout << "===EJERCICIO 3.2: Uso de la estructura else if: "
+            "\n"
+         << endl;
+    cout << "La estructura 'else if' en C++ permite manejar múltiples condiciones de manera secuencial. Si la primera condición en el 'if' es falsa, se evalúa la siguiente condición en el 'else if'. Si ninguna de las condiciones es verdadera, se ejecuta el 'else if' que sigue a la última condición verdadera."
+            "\n"
+         << endl;
+    cout << " por ejemplo, una clasificacion de edades: "
+            "\n"
+         << endl;
+    int edad2;
+    cout << "Ingrese la edad de la persona: "
+            "\n";
+    cin >> edad2;
+
+    if (edad2 < 13)
+    {
+        cout << "La persona es un niño." << endl;
+        "\n";
+    }
+    else if (edad2 >= 13 && edad2 < 20)
+    {
+        cout << "La persona es un adolescente." << endl;
+        "\n";
+    }
+    else if (edad2 >= 20 && edad2 < 65)
+    {
+        cout << "La persona es un adulto." << endl;
+        "\n";
+    }
+    else
+    {
+        cout << "La persona es un adulto mayor." << endl;
+        "\n";
+    }
+
+    /*Pregunta 4.1: Escribe un programa en C++ que imprima los números del 1 al 10 usando un bucle for.*/
+    cout << "===EJERCICIO 4.1: Imprimir numeros del 1 al 10 usando un bucle for: "
+            "\n"
+         << endl;
+    for (int i = 1; i <= 10; i++)
+    {
+        cout << i << endl;
+        "\n";
+    }
+
+    /*Pregunta 4.2: Modifica el programa anterior para que imprima los números del 10 al 1 usando un bucle while.*/
+    cout << "===EJERCICIO 4.2: Imprimir numeros del 10 al 1 usando un bucle while: "
+            "\n"
+         << endl;
+    int i = 10;
+    while (i >= 1)
+    {
+        cout << i << endl;
+        i--;
+        "\n";
+    }
+
+    /*Pregunta 4.3: Escribe un programa que imprima los números pares entre 1 y 20 utilizando un bucle do-while.*/
+    cout << "===EJERCICIO 4.3: Imprimir numeros pares del 1 al 20 usando un bucle do-while: "
+            "\n"
+         << endl;
+    int j = 2;
+    do
+    {
+        cout << j << endl;
+        j += 2;
+    } while (j <= 20);
+    "\n";
+
+    /*Pregunta 5.1: Escribe un programa en C++ que declare un array unidimensional de 5 enteros, lo llene con valores ingresados por el usuario y luego imprima el valor de cada uno de los elementos.*/
+    cout << "===EJERCICIO 5.1: Trabajar con arrays unidimensionales: "
+            "\n"
+         << endl;
+    const int TAMANO = 5;
+    int numeros[TAMANO];
+
+    // Llenar el array con valores ingresados por el usuario
+    for (int i = 0; i < TAMANO; i++)
+    {
+        cout << "Ingrese un numero entero: "
+                "\n";
+        cin >> numeros[i];
+    }
+
+    // Imprimir los valores del array
+    cout << "Los numeros ingresados son: "
+            "\n";
+    for (int i = 0; i < TAMANO; i++)
+    {
+        cout << numeros[i] << endl;
+    }
+
+    /*Pregunta 5.2: Explica qué es un array bidimensional y cómo acceder a sus elementos. Da un ejemplo en C++ de cómo declarar y acceder a un array bidimensional de tamaño 2x3.*/
+    cout << "===EJERCICIO 5.2: Trabajar con arrays bidimensionales: "
+            "\n"
+         << endl;
+    cout << "  Un array bidimensional es una estructura de datos que permite almacenar datos en una tabla de filas y columnas. Se accede a sus elementos utilizando dos índices: uno para la fila y otro para la columna."
+            "\n";
+    cout << "  Ejemplo de declaración y acceso a un array bidimensional de tamaño 2x3:"
+            "\n";
+    int matriz[2][3]; // Declaración de un array bidimensional de 2 filas y 3 columnas
+
+    // Llenar la matriz con valores
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << "Ingrese un numero para la posicion [" << i << "][" << j << "]: "
+                                                                                "\n";
+            cin >> matriz[i][j];
+        }
+    }
+
+    // Imprimir los valores de la matriz
+    cout << "Los numeros ingresados en la matriz son: "
+            "\n";
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << "Posicion [" << i << "][" << j << "]: " << matriz[i][j] << endl;
+        }
+    }
+    "\n";
+
+    /*Pregunta 5.3: Escribe un programa en C++ que inicialice un array bidimensional 3x3 con los números del 1 al 9, luego imprima la suma de todos sus elementos.*/
+    cout << "===EJERCICIO 5.3: Trabajar con arrays bidimensionales: "
+            "\n"
+         << endl;
+    int matriz3x3[3][3];
+    int suma = 0;
+
+    // Inicializar la matriz con los números del 1 al 9
+    int contador = 1;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            matriz3x3[i][j] = contador;
+            contador++;
+        }
+    }
+
+    // Imprimir la matriz y calcular la suma de sus elementos
+    cout << "La matriz 3x3 es: "
+            "\n";
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << matriz3x3[i][j] << " ";
+            suma += matriz3x3[i][j];
+        }
+        cout << endl;
+    }
+
+    cout << "La suma de todos los elementos de la matriz es: " << suma << endl;
+}
