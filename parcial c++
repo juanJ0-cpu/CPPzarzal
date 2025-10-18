@@ -1,0 +1,133 @@
+//sección A 
+//1) ¿Cuál declara y define una variable entera con valor 10?
+//Respuesta: B) int x = 10
+
+//2) ¿Qué imprime?   std::cout << 7/2 << " " << 7/2.0; 
+//Respuesta: B) 3 3.5 
+
+//3) Con bool a=true, b=false; ¿Qué imprime?   std::cout << (a&&b) << " " << (a||b) << " " << (!b); 
+//Respuesta:  B) 0 1 1 
+
+//4) Dado int x=3; if (x=0) { ... } else { ... } ¿qué ocurre? 
+//Respuesta: C) Entra al else porque el valor es 0 tras la asignación. 
+
+//5) do-while respecto a while: 
+//Respuesta: B) Ejecuta al menos una vez.
+
+//6) ¿Cuál lee dos enteros separados por espacio? 
+//Respuesta:C) cin >> a >> b; 
+
+//7) ¿Qué imprime? int a=5, b=2; std::cout << a + b*3 << '\n'; 
+//Respuesta:  A) 11 
+
+//8) ¿Cuál firma pasa un entero por referencia? 
+//Respuesta: B) void f(int& n); 
+
+//9) ¿Qué hace continue en un for? 
+//Respuesta: B) Salta a la siguiente iteración. 
+
+//10) ¿Cuál condición es verdadera? 
+//Respuesta: A) (3 == 3) && !(2 > 5) 
+
+// Sección B — Predice la salida (5 × 6 pts = 30 pts) 
+
+//1)
+//Respuesta: 11
+
+//2)
+//Respuesta: 0 1 2
+
+//3)
+//Respuesta:par
+
+//4)
+//Respuesta:321
+
+//5)
+//Respuesta:2 200
+
+//seccion C
+
+//1)
+//Respuesta :
+#include <iostream>
+
+int max3(int a, int b, int c) {
+    if (a >= b) {
+        if (a >= c) return a;
+        else return c;
+    } else {
+        if (b >= c) return b;
+        else return c;
+    }
+}
+
+int main() {
+    int a, b, c;
+    std::cout<<"Escribe tres numeros enteros: " "\n";
+    if (!(std::cin >> a >> b >> c)) return 0;
+    std::cout << "El numero entero mayor es: " << max3(a, b, c) << "\n";
+    return 0;
+}
+
+//2)
+//Respuesta:
+#include <iostream>
+
+int sumaRango(int a, int b) {
+    int suma = 0;
+    for (int i = a; i <= b; ++i) {
+        suma += i;
+    }
+    return suma;
+}
+
+int main() {
+    int a, b;
+    std::cout<<"Escribe el rango de la suma que quieres hacer: (primero el minimo despues el maximo) " "\n";
+    if (!(std::cin >> a >> b)) return 0;
+    std::cout << "Resultado: " << sumaRango(a, b) << '\n';
+    return 0;
+}
+
+//3)
+//Respuesta: 
+#include <iostream>
+
+bool contieneDigito(int n, int d) {
+    if (n == 0) return d == 0;
+    while (n > 0) {
+        if (n % 10 == d) return true;
+        n /= 10;
+    }
+    return false;
+}
+
+int main() {
+    int n, d;
+    std::cout << "Introduce un numero entero en 'n' que sea mayor a 0 y despues un numero en 'd' (dígito 0-9) que contenga 'n'.\n";
+    std::cout << "El programa mostrará true si d aparece en los dígitos de n. ejemplo n: 1234 d: 2  \n";
+    if (!(std::cin >> n >> d)) return 0;
+    std::cout << std::boolalpha << "Resultado: " << contieneDigito(n, d) << '\n';
+    return 0;
+}
+
+//4)
+//Respuesta: 
+#include <iostream>
+
+void tablaMultiplicar(int n) {
+    for (int i = 1; i <= 10; ++i) {
+        std::cout << n << " x " << i << " = " << (n * i) << '\n';
+    }
+}
+
+int main() {
+    int n;
+    std::cout<<"imprimir tabla del: ";
+    if (!(std::cin >> n)) return 0;
+    tablaMultiplicar(n);
+    return 0;
+}
+
+//gracias y que tenga un feliz día profe :)
